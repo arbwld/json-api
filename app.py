@@ -5,7 +5,7 @@
 # - Claude (2026) - claude-sonnet-4-6 - https://claude.ai
 
 import requests
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request
 
 app = Flask(__name__)
 
@@ -61,7 +61,8 @@ def carDetail(carId):
     car = findById(carList, carId)
     if not car:
         abort(404)
-    return render_template("car_detail.html", car=car)
+    fromPage = request.args.get('from', 'cars')
+    return render_template("car_detail.html", car=car, fromPage=fromPage)
 
 
 if __name__ == "__main__":

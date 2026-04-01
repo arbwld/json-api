@@ -28,7 +28,7 @@ function initViewer() {
     const keyLight = new THREE.DirectionalLight(0xffffff, 1.4);
     keyLight.position.set(5, 8, 5);
     scene.add(keyLight);
-    const rimLight = new THREE.DirectionalLight(0xf5c518, 0.5);
+    const rimLight = new THREE.DirectionalLight(0x1e6fff, 0.6);
     rimLight.position.set(-5, 1, -4);
     scene.add(rimLight);
 
@@ -38,6 +38,7 @@ function initViewer() {
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1.8;
     controls.enablePan = false;
+    controls.enableZoom = false;
 
     let rotateTimeout;
     let resetting = false;
@@ -89,12 +90,14 @@ function initViewer() {
             if (xhr.total) {
                 const pct = Math.round((xhr.loaded / xhr.total) * 100);
                 const el = document.getElementById('viewer-loading');
-                if (el) el.textContent = `Laden... ${pct}%`;
+                if (el) {
+                    el.textContent = `Loading... ${pct}%`;
+                }
             }
         },
         (err) => {
             console.error('GLB load error:', err);
-            document.getElementById('viewer-loading').textContent = 'Model kon niet worden geladen.';
+            document.getElementById('viewer-loading').textContent = 'Failed to load model.';
         }
     );
 

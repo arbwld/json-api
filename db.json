@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Juha Kankkunen",
-      "nationality": "Fins",
+      "nationality": "Finnish",
       "championships": 4,
       "mostIconicCar": "Lancia Delta Integrale",
       "carId": 10,
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "name": "Carlos Sainz",
-      "nationality": "Spaans",
+      "nationality": "Spanish",
       "championships": 2,
       "mostIconicCar": "Toyota Celica GT-Four",
       "carId": 12,
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "name": "Colin McRae",
-      "nationality": "Schots",
+      "nationality": "Scottish",
       "championships": 1,
       "mostIconicCar": "Subaru Impreza WRC",
       "carId": 7,
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "name": "Tommi Mäkinen",
-      "nationality": "Fins",
+      "nationality": "Finnish",
       "championships": 4,
       "mostIconicCar": "Mitsubishi Lancer Evo WRC",
       "carId": 8,
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "name": "François Delecour",
-      "nationality": "Frans",
+      "nationality": "French",
       "championships": 0,
       "mostIconicCar": "Ford Escort RS Cosworth",
       "carId": 9,
@@ -53,7 +53,7 @@
     {
       "id": 6,
       "name": "Richard Burns",
-      "nationality": "Brits",
+      "nationality": "British",
       "championships": 1,
       "mostIconicCar": "Subaru Impreza WRC",
       "carId": 7,
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "name": "Walter Röhrl",
-      "nationality": "Duits",
+      "nationality": "German",
       "championships": 2,
       "mostIconicCar": "Audi Sport Quattro S1 E2",
       "carId": 2,
@@ -73,7 +73,7 @@
     {
       "id": 8,
       "name": "Ari Vatanen",
-      "nationality": "Fins",
+      "nationality": "Finnish",
       "championships": 1,
       "mostIconicCar": "Peugeot 205 T16 E2",
       "carId": 3,
@@ -83,7 +83,7 @@
     {
       "id": 9,
       "name": "Hannu Mikkola",
-      "nationality": "Fins",
+      "nationality": "Finnish",
       "championships": 1,
       "mostIconicCar": "Audi Quattro",
       "carId": 2,
@@ -93,7 +93,7 @@
     {
       "id": 10,
       "name": "Stig Blomqvist",
-      "nationality": "Zweeds",
+      "nationality": "Swedish",
       "championships": 1,
       "mostIconicCar": "Audi Sport Quattro S1 E2",
       "carId": 2,
@@ -103,7 +103,7 @@
     {
       "id": 11,
       "name": "Michèle Mouton",
-      "nationality": "Frans",
+      "nationality": "French",
       "championships": 0,
       "mostIconicCar": "Audi Sport Quattro S1 E2",
       "carId": 2,
@@ -113,7 +113,7 @@
     {
       "id": 12,
       "name": "Petter Solberg",
-      "nationality": "Noors",
+      "nationality": "Norwegian",
       "championships": 1,
       "mostIconicCar": "Subaru Impreza WRC",
       "carId": 7,

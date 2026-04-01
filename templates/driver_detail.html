@@ -2,23 +2,23 @@
 {% block title %}{{ driver.name }} - Rally Legends{% endblock %}
 
 {% block content %}
-<div class="detail-page">
-    <a href="/drivers" class="back-link">&larr; Terug naar rijders</a>
+<div class="driver-detail-page">
+    <a href="/drivers" class="back-link">&larr; Back to Drivers</a>
 
-    <div class="detail-header">
-        <span class="detail-era">{{ driver.era }}</span>
+    <div class="driver-header">
+        <span class="driver-era">{{ driver.era }}</span>
         <h1>{{ driver.name }}</h1>
     </div>
 
-    <div class="detail-grid">
+    <div class="driver-cards">
         <div class="detail-card">
-            <h3>Profiel</h3>
+            <h3>Profile</h3>
             <div class="detail-row">
-                <span class="detail-label">Nationaliteit</span>
+                <span class="detail-label">Nationality</span>
                 <span class="detail-value">{{ driver.nationality }}</span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Actieve jaren</span>
+                <span class="detail-label">Active Years</span>
                 <span class="detail-value">{{ driver.activeYears }}</span>
             </div>
             <div class="detail-row">
@@ -26,32 +26,32 @@
                 <span class="detail-value">{{ driver.era }}</span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Kampioenschappen</span>
+                <span class="detail-label">Championships</span>
                 <span class="detail-value highlight">{{ driver.championships }}</span>
             </div>
         </div>
 
         {% if car %}
         <div class="detail-card">
-            <h3>Iconische Auto</h3>
+            <h3>Iconic Car</h3>
             <p class="car-name-large">{{ car.name }}</p>
             <div class="detail-row">
-                <span class="detail-label">Klasse</span>
+                <span class="detail-label">Class</span>
                 <span class="detail-value">{{ car.class }}</span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Bouwjaar</span>
+                <span class="detail-label">Year</span>
                 <span class="detail-value">{{ car.year }}</span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Vermogen</span>
-                <span class="detail-value highlight">{{ car.horsepower }} pk</span>
+                <span class="detail-label">Power</span>
+                <span class="detail-value highlight">{{ car.horsepower }} HP</span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Aandrijving</span>
+                <span class="detail-label">Drivetrain</span>
                 <span class="detail-value">{{ car.drivetrain }}</span>
             </div>
-            <a href="/cars/{{ car.id }}" class="btn btn-secondary" style="margin-top:1rem;">Meer over deze auto</a>
+            <a href="/cars/{{ car.id }}?from=driver" class="btn btn-secondary" style="margin-top: 1.25rem; display: inline-block;">View Car &rarr;</a>
         </div>
         {% endif %}
     </div>
