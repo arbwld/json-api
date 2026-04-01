@@ -5,6 +5,10 @@
 const viewerEl = document.getElementById('viewer');
 const glbPath = viewerEl.dataset.glbPath;
 
+// Tweak this to adjust how close the camera starts.
+// Lower = closer. 1.0 is very tight, 3.0 is far out.
+const ZOOM = 1.1;
+
 function initViewer() {
     const width = viewerEl.clientWidth;
     const height = viewerEl.clientHeight;
@@ -36,12 +40,19 @@ function initViewer() {
     controls.enablePan = false;
 
     let rotateTimeout;
+    let resetting = false;
+    let initialCamPos = new THREE.Vector3();
+    let initialTarget = new THREE.Vector3();
+
     renderer.domElement.addEventListener('pointerdown', () => {
         controls.autoRotate = false;
+        resetting = false;
         clearTimeout(rotateTimeout);
     });
     renderer.domElement.addEventListener('pointerup', () => {
-        rotateTimeout = setTimeout(() => { controls.autoRotate = true; }, 2000);
+        rotateTimeout = setTimeout(() => {
+            resetting = true;
+        }, 2000);
     });
 
     const loader = new THREE.GLTFLoader();
@@ -61,14 +72,16 @@ function initViewer() {
             controls.maxDistance = maxDim * 10;
 
             camera.position.set(
-                center.x + maxDim * 2.2,
+                center.x + maxDim * ZOOM,
                 center.y + maxDim * 0.3,
-                center.z + maxDim * 2.2
+                center.z + maxDim * ZOOM
             );
             camera.near = maxDim * 0.01;
             camera.far = maxDim * 100;
             camera.updateProjectionMatrix();
             controls.update();
+            initialCamPos.copy(camera.position);
+            initialTarget.copy(controls.target);
 
             document.getElementById('viewer-loading').style.display = 'none';
         },
@@ -95,6 +108,21 @@ function initViewer() {
 
     function animate() {
         requestAnimationFrame(animate);
+
+        if (resetting) {
+            // Disable controls so OrbitControls doesn't fight the lerp
+            controls.enabled = false;
+            camera.position.lerp(initialCamPos, 0.05);
+            controls.target.lerp(initialTarget, 0.05);
+            camera.lookAt(controls.target);
+
+            if (camera.position.distanceTo(initialCamPos) < 0.8) {
+                resetting = false;
+                controls.enabled = true;
+                controls.autoRotate = true;
+            }
+        }
+
         controls.update();
         renderer.render(scene, camera);
     }
