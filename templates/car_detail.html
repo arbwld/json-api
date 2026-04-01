@@ -16,8 +16,7 @@
         <div
             id="viewer"
             class="viewer-canvas"
-            data-car-node="{{ car.modelNode }}"
-            data-glb-path="{{ url_for('static', filename='1965-2002_rally_cars.glb') }}"
+            data-glb-path="{{ url_for('static', filename='models/' + car.modelFile) }}"
         >
             <span id="viewer-loading">Laden...</span>
         </div>

@@ -131,7 +131,7 @@
       "horsepower": 500,
       "drivetrain": "AWD",
       "legendary": true,
-      "modelNode": "Lancia S4"
+      "modelFile": "lancia_s4.glb"
     },
     {
       "id": 2,
@@ -142,7 +142,7 @@
       "horsepower": 500,
       "drivetrain": "AWD",
       "legendary": true,
-      "modelNode": "Audi Quattro"
+      "modelFile": "audi_quattro.glb"
     },
     {
       "id": 3,
@@ -153,7 +153,7 @@
       "horsepower": 450,
       "drivetrain": "AWD",
       "legendary": true,
-      "modelNode": "Peugeot 205"
+      "modelFile": "peugeot_205.glb"
     },
     {
       "id": 4,
@@ -164,7 +164,7 @@
       "horsepower": 450,
       "drivetrain": "AWD",
       "legendary": true,
-      "modelNode": "Ford RS200"
+      "modelFile": "ford_rs200.glb"
     },
     {
       "id": 5,
@@ -175,7 +175,7 @@
       "horsepower": 175,
       "drivetrain": "RWD",
       "legendary": true,
-      "modelNode": "Renault Alpine"
+      "modelFile": "renault_alpine.glb"
     },
     {
       "id": 6,
@@ -186,7 +186,7 @@
       "horsepower": 240,
       "drivetrain": "RWD",
       "legendary": true,
-      "modelNode": "body_geo #370564"
+      "modelFile": "body_geo_370564.glb"
     },
     {
       "id": 7,
@@ -197,7 +197,7 @@
       "horsepower": 300,
       "drivetrain": "AWD",
       "legendary": true,
-      "modelNode": "Subaru Impreza"
+      "modelFile": "subaru_impreza.glb"
     },
     {
       "id": 8,
@@ -208,7 +208,7 @@
       "horsepower": 300,
       "drivetrain": "AWD",
       "legendary": false,
-      "modelNode": "body_geo"
+      "modelFile": "body_geo.glb"
     },
     {
       "id": 9,
@@ -219,7 +219,7 @@
       "horsepower": 300,
       "drivetrain": "AWD",
       "legendary": false,
-      "modelNode": "Ford Cosworth"
+      "modelFile": "ford_cosworth.glb"
     },
     {
       "id": 10,
@@ -230,7 +230,7 @@
       "horsepower": 250,
       "drivetrain": "AWD",
       "legendary": true,
-      "modelNode": "Lancia Delta"
+      "modelFile": "lancia_delta.glb"
     },
     {
       "id": 11,
@@ -241,7 +241,7 @@
       "horsepower": 300,
       "drivetrain": "RWD",
       "legendary": true,
-      "modelNode": "BMW E30"
+      "modelFile": "bmw_e30.glb"
     },
     {
       "id": 12,
@@ -252,7 +252,7 @@
       "horsepower": 300,
       "drivetrain": "AWD",
       "legendary": false,
-      "modelNode": "Toyota Celica"
+      "modelFile": "toyota_celica.glb"
     }
   ]
 }
