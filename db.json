@@ -1,40 +1,246 @@
 {
-  "sensors": [
+  "drivers": [
     {
       "id": 1,
-      "type": "temperature",
-      "unit": "°C",
-      "model": "DHT22",
-      "location": 1,
-      "accuracy": "±0.5°C"
+      "name": "Sébastien Loeb",
+      "nationality": "Frans",
+      "championships": 9,
+      "mostIconicCar": "Citroën Xsara WRC",
+      "carId": 10,
+      "era": "WRC",
+      "activeYears": "2002-2012"
     },
     {
       "id": 2,
-      "type": "humidity",
-      "unit": "%",
-      "model": "DHT22",
-      "location": 1,
-      "accuracy": "±2%"
+      "name": "Carlos Sainz",
+      "nationality": "Spaans",
+      "championships": 2,
+      "mostIconicCar": "Toyota Celica GT-Four",
+      "carId": 12,
+      "era": "WRC",
+      "activeYears": "1987-2010"
+    },
+    {
+      "id": 3,
+      "name": "Colin McRae",
+      "nationality": "Schots",
+      "championships": 1,
+      "mostIconicCar": "Subaru Impreza WRC",
+      "carId": 7,
+      "era": "WRC",
+      "activeYears": "1989-2006"
+    },
+    {
+      "id": 4,
+      "name": "Tommi Mäkinen",
+      "nationality": "Fins",
+      "championships": 4,
+      "mostIconicCar": "Mitsubishi Lancer Evo WRC",
+      "carId": 8,
+      "era": "WRC",
+      "activeYears": "1987-2003"
+    },
+    {
+      "id": 5,
+      "name": "Marcus Grönholm",
+      "nationality": "Fins",
+      "championships": 2,
+      "mostIconicCar": "Peugeot 206 WRC",
+      "carId": 11,
+      "era": "WRC",
+      "activeYears": "1995-2007"
+    },
+    {
+      "id": 6,
+      "name": "Richard Burns",
+      "nationality": "Brits",
+      "championships": 1,
+      "mostIconicCar": "Subaru Impreza WRC",
+      "carId": 7,
+      "era": "WRC",
+      "activeYears": "1990-2003"
+    },
+    {
+      "id": 7,
+      "name": "Walter Röhrl",
+      "nationality": "Duits",
+      "championships": 2,
+      "mostIconicCar": "Audi Sport Quattro S1 E2",
+      "carId": 2,
+      "era": "Group B",
+      "activeYears": "1973-1987"
+    },
+    {
+      "id": 8,
+      "name": "Ari Vatanen",
+      "nationality": "Fins",
+      "championships": 1,
+      "mostIconicCar": "Peugeot 205 T16 E2",
+      "carId": 3,
+      "era": "Group B",
+      "activeYears": "1976-1993"
+    },
+    {
+      "id": 9,
+      "name": "Hannu Mikkola",
+      "nationality": "Fins",
+      "championships": 1,
+      "mostIconicCar": "Audi Quattro",
+      "carId": 2,
+      "era": "Group B",
+      "activeYears": "1966-1994"
+    },
+    {
+      "id": 10,
+      "name": "Stig Blomqvist",
+      "nationality": "Zweeds",
+      "championships": 1,
+      "mostIconicCar": "Audi Sport Quattro S1 E2",
+      "carId": 2,
+      "era": "Group B",
+      "activeYears": "1970-1998"
+    },
+    {
+      "id": 11,
+      "name": "Michèle Mouton",
+      "nationality": "Frans",
+      "championships": 0,
+      "mostIconicCar": "Audi Sport Quattro S1 E2",
+      "carId": 2,
+      "era": "Group B",
+      "activeYears": "1975-1986"
+    },
+    {
+      "id": 12,
+      "name": "Petter Solberg",
+      "nationality": "Noors",
+      "championships": 1,
+      "mostIconicCar": "Subaru Impreza WRC",
+      "carId": 7,
+      "era": "WRC",
+      "activeYears": "1998-2012"
     }
   ],
-  "locations": [
+  "cars": [
     {
       "id": 1,
-      "name": "Woonkamer",
-      "building": "Hoofdgebouw",
-      "floor": 1,
-      "coordinates": {
-        "lat": 52.370216,
-        "lng": 4.895168
-      }
-    }
-  ],
-  "measurements": [
+      "name": "Lancia Delta S4",
+      "manufacturer": "Lancia",
+      "class": "Group B",
+      "year": 1985,
+      "horsepower": 500,
+      "drivetrain": "AWD",
+      "legendary": true
+    },
     {
-      "id": 1,
-      "sensor_id": 1,
-      "value": 21.5,
-      "timestamp": "2025-03-26T10:30:00Z"
+      "id": 2,
+      "name": "Audi Sport Quattro S1 E2",
+      "manufacturer": "Audi",
+      "class": "Group B",
+      "year": 1985,
+      "horsepower": 500,
+      "drivetrain": "AWD",
+      "legendary": true
+    },
+    {
+      "id": 3,
+      "name": "Peugeot 205 T16 E2",
+      "manufacturer": "Peugeot",
+      "class": "Group B",
+      "year": 1985,
+      "horsepower": 450,
+      "drivetrain": "AWD",
+      "legendary": true
+    },
+    {
+      "id": 4,
+      "name": "Ford RS200",
+      "manufacturer": "Ford",
+      "class": "Group B",
+      "year": 1986,
+      "horsepower": 450,
+      "drivetrain": "AWD",
+      "legendary": true
+    },
+    {
+      "id": 5,
+      "name": "MG Metro 6R4",
+      "manufacturer": "MG",
+      "class": "Group B",
+      "year": 1986,
+      "horsepower": 410,
+      "drivetrain": "AWD",
+      "legendary": true
+    },
+    {
+      "id": 6,
+      "name": "Lancia Stratos HF",
+      "manufacturer": "Lancia",
+      "class": "Group 4",
+      "year": 1974,
+      "horsepower": 240,
+      "drivetrain": "RWD",
+      "legendary": true
+    },
+    {
+      "id": 7,
+      "name": "Subaru Impreza WRC",
+      "manufacturer": "Subaru",
+      "class": "WRC",
+      "year": 1997,
+      "horsepower": 300,
+      "drivetrain": "AWD",
+      "legendary": true
+    },
+    {
+      "id": 8,
+      "name": "Mitsubishi Lancer Evo WRC",
+      "manufacturer": "Mitsubishi",
+      "class": "Group A",
+      "year": 1997,
+      "horsepower": 300,
+      "drivetrain": "AWD",
+      "legendary": false
+    },
+    {
+      "id": 9,
+      "name": "Ford Focus RS WRC",
+      "manufacturer": "Ford",
+      "class": "WRC",
+      "year": 1999,
+      "horsepower": 300,
+      "drivetrain": "AWD",
+      "legendary": false
+    },
+    {
+      "id": 10,
+      "name": "Citroën Xsara WRC",
+      "manufacturer": "Citroën",
+      "class": "WRC",
+      "year": 2001,
+      "horsepower": 300,
+      "drivetrain": "AWD",
+      "legendary": false
+    },
+    {
+      "id": 11,
+      "name": "Peugeot 206 WRC",
+      "manufacturer": "Peugeot",
+      "class": "WRC",
+      "year": 2000,
+      "horsepower": 300,
+      "drivetrain": "AWD",
+      "legendary": false
+    },
+    {
+      "id": 12,
+      "name": "Toyota Celica GT-Four",
+      "manufacturer": "Toyota",
+      "class": "Group A",
+      "year": 1992,
+      "horsepower": 300,
+      "drivetrain": "AWD",
+      "legendary": false
     }
   ]
 }

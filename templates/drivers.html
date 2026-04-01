@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Rijders - Rally Legends{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>RIJDERS</h1>
+    <p>{{ drivers|length }} rijders gevonden</p>
+</div>
+
+<div class="grid">
+    {% for driver in drivers %}
+    <a href="/drivers/{{ driver.id }}" class="card">
+        <div class="card-era">{{ driver.era }}</div>
+        <h2 class="card-name">{{ driver.name }}</h2>
+        <p class="card-sub">{{ driver.nationality }} &bull; {{ driver.activeYears }}</p>
+        <div class="card-stat">
+            <span class="champ-count">{{ driver.championships }}</span>
+            <span class="champ-label">{% if driver.championships == 1 %}kampioenschap{% else %}kampioenschappen{% endif %}</span>
+        </div>
+        <p class="card-car">{{ driver.mostIconicCar }}</p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Rally Legends - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-sub">De grootste namen uit de rallygeschiedenis</p>
+        <h1 class="hero-title">RALLY<br>LEGENDS</h1>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">{{ driverCount }}</span>
+                <span class="stat-label">Rijders</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-number">{{ carCount }}</span>
+                <span class="stat-label">Auto's</span>
+            </div>
+        </div>
+        <div class="hero-actions">
+            <a href="/drivers" class="btn btn-primary">Bekijk Rijders</a>
+            <a href="/cars" class="btn btn-secondary">Bekijk Auto's</a>
+        </div>
+    </div>
+    <div class="hero-stripe"></div>
+</section>
+{% endblock %}

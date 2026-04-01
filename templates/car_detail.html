@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}{{ car.name }} - Rally Legends{% endblock %}
+
+{% block content %}
+<div class="detail-page">
+    <a href="/cars" class="back-link">&larr; Terug naar auto's</a>
+
+    <div class="detail-header">
+        <span class="detail-era {% if car.legendary %}legendary-badge{% endif %}">
+            {% if car.legendary %}&#9733; Legende{% else %}{{ car.class }}{% endif %}
+        </span>
+        <h1>{{ car.name }}</h1>
+    </div>
+
+    <div class="detail-grid single">
+        <div class="detail-card">
+            <h3>Specificaties</h3>
+            <div class="detail-row">
+                <span class="detail-label">Fabrikant</span>
+                <span class="detail-value">{{ car.manufacturer }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Klasse</span>
+                <span class="detail-value">{{ car.class }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Bouwjaar</span>
+                <span class="detail-value">{{ car.year }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Vermogen</span>
+                <span class="detail-value highlight">{{ car.horsepower }} pk</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Aandrijving</span>
+                <span class="detail-value">{{ car.drivetrain }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Legendarisch</span>
+                <span class="detail-value">{% if car.legendary %}Ja &#9733;{% else %}Nee{% endif %}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

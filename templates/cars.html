@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Auto's - Rally Legends{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>AUTO'S</h1>
+    <p>{{ cars|length }} auto's gevonden</p>
+</div>
+
+<div class="grid">
+    {% for car in cars %}
+    <a href="/cars/{{ car.id }}" class="card">
+        {% if car.legendary %}
+        <div class="card-era legendary-badge">&#9733; Legende</div>
+        {% else %}
+        <div class="card-era">{{ car.class }}</div>
+        {% endif %}
+        <h2 class="card-name">{{ car.name }}</h2>
+        <p class="card-sub">{{ car.manufacturer }} &bull; {{ car.year }}</p>
+        <div class="card-stat">
+            <span class="champ-count">{{ car.horsepower }}</span>
+            <span class="champ-label">pk</span>
+        </div>
+        <p class="card-car">{{ car.drivetrain }} &bull; {{ car.class }}</p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
