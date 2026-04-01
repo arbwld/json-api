@@ -2,13 +2,13 @@
   "drivers": [
     {
       "id": 1,
-      "name": "Sébastien Loeb",
-      "nationality": "Frans",
-      "championships": 9,
-      "mostIconicCar": "Citroën Xsara WRC",
+      "name": "Juha Kankkunen",
+      "nationality": "Fins",
+      "championships": 4,
+      "mostIconicCar": "Lancia Delta Integrale",
       "carId": 10,
-      "era": "WRC",
-      "activeYears": "2002-2012"
+      "era": "Group A",
+      "activeYears": "1981-2002"
     },
     {
       "id": 2,
@@ -42,13 +42,13 @@
     },
     {
       "id": 5,
-      "name": "Marcus Grönholm",
-      "nationality": "Fins",
-      "championships": 2,
-      "mostIconicCar": "Peugeot 206 WRC",
-      "carId": 11,
-      "era": "WRC",
-      "activeYears": "1995-2007"
+      "name": "François Delecour",
+      "nationality": "Frans",
+      "championships": 0,
+      "mostIconicCar": "Ford Escort RS Cosworth",
+      "carId": 9,
+      "era": "Group A",
+      "activeYears": "1990-2002"
     },
     {
       "id": 6,
@@ -130,7 +130,8 @@
       "year": 1985,
       "horsepower": 500,
       "drivetrain": "AWD",
-      "legendary": true
+      "legendary": true,
+      "modelNode": "Lancia S4"
     },
     {
       "id": 2,
@@ -140,7 +141,8 @@
       "year": 1985,
       "horsepower": 500,
       "drivetrain": "AWD",
-      "legendary": true
+      "legendary": true,
+      "modelNode": "Audi Quattro"
     },
     {
       "id": 3,
@@ -150,7 +152,8 @@
       "year": 1985,
       "horsepower": 450,
       "drivetrain": "AWD",
-      "legendary": true
+      "legendary": true,
+      "modelNode": "Peugeot 205"
     },
     {
       "id": 4,
@@ -160,17 +163,19 @@
       "year": 1986,
       "horsepower": 450,
       "drivetrain": "AWD",
-      "legendary": true
+      "legendary": true,
+      "modelNode": "Ford RS200"
     },
     {
       "id": 5,
-      "name": "MG Metro 6R4",
-      "manufacturer": "MG",
-      "class": "Group B",
-      "year": 1986,
-      "horsepower": 410,
-      "drivetrain": "AWD",
-      "legendary": true
+      "name": "Alpine A110",
+      "manufacturer": "Alpine",
+      "class": "Group 4",
+      "year": 1973,
+      "horsepower": 175,
+      "drivetrain": "RWD",
+      "legendary": true,
+      "modelNode": "Renault Alpine"
     },
     {
       "id": 6,
@@ -180,7 +185,8 @@
       "year": 1974,
       "horsepower": 240,
       "drivetrain": "RWD",
-      "legendary": true
+      "legendary": true,
+      "modelNode": "body_geo #370564"
     },
     {
       "id": 7,
@@ -190,7 +196,8 @@
       "year": 1997,
       "horsepower": 300,
       "drivetrain": "AWD",
-      "legendary": true
+      "legendary": true,
+      "modelNode": "Subaru Impreza"
     },
     {
       "id": 8,
@@ -200,37 +207,41 @@
       "year": 1997,
       "horsepower": 300,
       "drivetrain": "AWD",
-      "legendary": false
+      "legendary": false,
+      "modelNode": "body_geo"
     },
     {
       "id": 9,
-      "name": "Ford Focus RS WRC",
+      "name": "Ford Escort RS Cosworth",
       "manufacturer": "Ford",
-      "class": "WRC",
-      "year": 1999,
+      "class": "Group A",
+      "year": 1993,
       "horsepower": 300,
       "drivetrain": "AWD",
-      "legendary": false
+      "legendary": false,
+      "modelNode": "Ford Cosworth"
     },
     {
       "id": 10,
-      "name": "Citroën Xsara WRC",
-      "manufacturer": "Citroën",
-      "class": "WRC",
-      "year": 2001,
-      "horsepower": 300,
+      "name": "Lancia Delta Integrale",
+      "manufacturer": "Lancia",
+      "class": "Group A",
+      "year": 1987,
+      "horsepower": 250,
       "drivetrain": "AWD",
-      "legendary": false
+      "legendary": true,
+      "modelNode": "Lancia Delta"
     },
     {
       "id": 11,
-      "name": "Peugeot 206 WRC",
-      "manufacturer": "Peugeot",
-      "class": "WRC",
-      "year": 2000,
+      "name": "BMW M3 E30",
+      "manufacturer": "BMW",
+      "class": "Group A",
+      "year": 1987,
       "horsepower": 300,
-      "drivetrain": "AWD",
-      "legendary": false
+      "drivetrain": "RWD",
+      "legendary": true,
+      "modelNode": "BMW E30"
     },
     {
       "id": 12,
@@ -240,7 +251,8 @@
       "year": 1992,
       "horsepower": 300,
       "drivetrain": "AWD",
-      "legendary": false
+      "legendary": false,
+      "modelNode": "Toyota Celica"
     }
   ]
 }

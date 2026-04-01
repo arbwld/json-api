@@ -402,10 +402,51 @@ footer {
     font-size: 0.8rem;
 }
 
+/* ===== 3D VIEWER ===== */
+.car-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 1px;
+    background: var(--border);
+}
+
+.viewer-canvas {
+    position: relative;
+    height: 480px;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.viewer-canvas canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#viewer-loading {
+    position: absolute;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
     .detail-grid {
         grid-template-columns: 1fr;
+    }
+
+    .car-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .viewer-canvas {
+        height: 300px;
     }
 
     .hero-title {
