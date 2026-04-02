@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Rally Legends - Home{% endblock %}
 
+{% block extra_head %}
+<style>
+    footer { display: none; }
+    html, body { overflow: hidden; height: 100%; }
+    .hero { height: 100dvh; min-height: unset; padding-top: 0; align-items: center; }
+</style>
+{% endblock %}
+
 {% block content %}
 <section class="hero">
     <div class="hero-content">

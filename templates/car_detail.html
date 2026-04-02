@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 {% block title %}{{ car.name }} - Rally Legends{% endblock %}
 
+{% block extra_head %}
+<style>
+    .navbar, footer { display: none; }
+    html, body { overflow: hidden; height: 100%; }
+    .gt-stage { height: 100dvh; }
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="gt-stage">
-    {% if fromPage == 'driver' %}
-    <a href="/drivers" class="gt-back">&larr; Back to Drivers</a>
-    {% else %}
-    <a href="/cars" class="gt-back">&larr; Back to Cars</a>
-    {% endif %}
+    <a href="{% if fromPage == 'driver' %}/drivers{% else %}/cars{% endif %}" class="gt-back">
+        &larr; Back to {% if fromPage == 'driver' %}Drivers{% else %}Cars{% endif %}
+    </a>
 
     <div
         id="viewer"
@@ -17,38 +23,16 @@
         <span id="viewer-loading">Loading...</span>
     </div>
 
-    <div class="gt-car-title">
-        <span class="gt-badge">
+    <div class="gt-stats-overlay">
+        <span class="gt-stats-badge">
             {% if car.legendary %}&#9733; Legend &nbsp;&bull;&nbsp; {% endif %}{{ car.class }}
         </span>
-        <h1>{{ car.name }}</h1>
-    </div>
-
-    <div class="gt-specs-panel">
-        <h3>Specifications</h3>
-        <div class="detail-row">
-            <span class="detail-label">Manufacturer</span>
-            <span class="detail-value">{{ car.manufacturer }}</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Class</span>
-            <span class="detail-value">{{ car.class }}</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Year</span>
-            <span class="detail-value">{{ car.year }}</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Power</span>
-            <span class="detail-value highlight">{{ car.horsepower }} HP</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Drivetrain</span>
-            <span class="detail-value">{{ car.drivetrain }}</span>
-        </div>
-        <div class="detail-row">
-            <span class="detail-label">Legendary</span>
-            <span class="detail-value">{% if car.legendary %}Yes &#9733;{% else %}No{% endif %}</span>
+        <p class="gt-stats-mfr">{{ car.manufacturer }}</p>
+        <h1 class="gt-stats-name">{{ car.name }}</h1>
+        <div class="gt-stats-list">
+            <p>{{ car.year }}</p>
+            <p>{{ car.drivetrain }}</p>
+            <p class="gt-stats-hp">{{ car.horsepower }} HP</p>
         </div>
     </div>
 </div>

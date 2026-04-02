@@ -24,12 +24,15 @@ function initViewer() {
     renderer.toneMappingExposure = 1.2;
     viewerEl.appendChild(renderer.domElement);
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.8));
-    const keyLight = new THREE.DirectionalLight(0xffffff, 1.4);
-    keyLight.position.set(5, 8, 5);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    const keyLight = new THREE.DirectionalLight(0xffffff, 2.2);
+    keyLight.position.set(4, 7, 8);
     scene.add(keyLight);
-    const rimLight = new THREE.DirectionalLight(0x1e6fff, 0.6);
-    rimLight.position.set(-5, 1, -4);
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.25);
+    fillLight.position.set(-8, 2, 2);
+    scene.add(fillLight);
+    const rimLight = new THREE.DirectionalLight(0x1e6fff, 0.9);
+    rimLight.position.set(-4, 1, -7);
     scene.add(rimLight);
 
     const controls = new THREE.OrbitControls(camera, renderer.domElement);

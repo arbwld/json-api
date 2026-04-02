@@ -2,6 +2,17 @@
 {% block title %}Drivers - Rally Legends{% endblock %}
 
 {% block content %}
+{% set flagCodes = {
+    'Finnish': 'fi',
+    'Spanish': 'es',
+    'Scottish': 'gb-sct',
+    'French': 'fr',
+    'British': 'gb',
+    'German': 'de',
+    'Norwegian': 'no',
+    'Swedish': 'se'
+} %}
+
 <div class="page-header">
     <h1>DRIVERS</h1>
     <p>{{ drivers|length }} legends documented</p>
@@ -13,7 +24,10 @@
         <div class="strip-left">
             <span class="strip-badge">{{ driver.era }}</span>
             <h2 class="strip-name">{{ driver.name }}</h2>
-            <p class="strip-meta">{{ driver.nationality }} &bull; {{ driver.activeYears }}</p>
+            <p class="strip-meta">
+                <img class="strip-flag" src="https://flagcdn.com/w20/{{ flagCodes.get(driver.nationality, 'un') }}.png" alt="{{ driver.nationality }}">
+                {{ driver.nationality }} &bull; {{ driver.activeYears }}
+            </p>
         </div>
         <div class="strip-right">
             <span class="strip-num">{{ driver.championships }}</span>
